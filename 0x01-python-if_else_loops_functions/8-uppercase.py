@@ -9,6 +9,3 @@ def uppercase(str):
             str_result += c
 
     print("{}".format(str_result))
-
-
-print()
