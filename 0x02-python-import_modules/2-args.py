@@ -7,7 +7,7 @@ if __name__ == "__main__":
     arg_list = list(sys.argv)
 
     if arg_count == 1:
-        print("0 arguments")
+        print("0 arguments.")
 
     if arg_count == 2:
         print("{} argument:\n{}: {}".format(1, 1, arg_list[1]))
