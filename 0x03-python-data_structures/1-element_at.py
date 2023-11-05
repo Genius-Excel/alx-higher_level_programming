@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def element_at(my_list, idx):
-#    element = None
+    element = None
 
     list_len = len(my_list)
 
