@@ -7,4 +7,7 @@ def simple_delete(a_dictionary, key=""):
             if dict_key == key:
                 del(dict_key)
 
+    else:
+        return a_dictionary
+
     return a_dictionary
