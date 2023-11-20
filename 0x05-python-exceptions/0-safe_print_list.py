@@ -15,6 +15,6 @@ def safe_print_list(my_list=[], x=0):
 #        num_of_element = lis_len(new_list)
 
     except Exception as e:
-        print()
+        pass
 
     return num_of_element
