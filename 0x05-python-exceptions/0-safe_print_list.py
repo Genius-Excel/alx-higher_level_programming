@@ -1,23 +1,5 @@
 #!/usr/bin/python3
 
-def lis_len(my_list=[]):
-    """This function calculates the lenght of a list.
-
-    Args:
-        my_list: List whose lenght is to be calculated.
-
-    Returns:
-        The lenght of my_list.
-    """
-
-    list_len = 0
-
-    for element in my_list:
-        list_len += 1
-
-    return (list_len)
-
-
 def safe_print_list(my_list=[], x=0):
     new_list = []
 
