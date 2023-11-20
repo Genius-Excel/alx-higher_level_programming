@@ -10,7 +10,7 @@ def safe_print_list_integers(my_list=[], x=0):
 
         for item in new_list:
             if isinstance(item, int):
-                print(item, end='')
+                print("{:d}".format(item), end='')
                 element_printed += 1
             else:
                 pass
