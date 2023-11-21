@@ -61,9 +61,8 @@ class Square:
 
     @property
     def positive_tuple(self, tup_list: tuple) -> bool:
-        for item in tup_list:
-            if item < 0:
-                return False
+        if tup_list[0] < 0 or tup_list[1] < 0:
+            return False
 
         return True
 
