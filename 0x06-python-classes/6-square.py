@@ -66,9 +66,19 @@ class Square:
 
         return True
 
+    @property
+    def valid_len(self, tup_list: tuple) -> bool:
+        if len(tup_list) == 2:
+            return True
+
+        return False
+
     @position.setter
     def position(self, value):
         if isinstance(value, tuple) is False or self.positive_tuple:
+            raise TypeError("position must be a tuple of 2 positive integers")
+
+        if valid_len(self, value) is False:
             raise TypeError("position must be a tuple of 2 positive integers")
 
         self.__position = value
