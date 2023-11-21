@@ -2,6 +2,7 @@
 
 "This is a definition for an empty class that does nothing"
 
+
 class Square:
     """This is an empty class that defines a square.
 
