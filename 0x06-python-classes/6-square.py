@@ -59,12 +59,14 @@ class Square:
     def position(self):
         return (self.__position)
 
+#    @property
     def positive_tuple(self, tup_list: tuple) -> bool:
-        if tup_list[0] < 0 and tup_list[1] < 0:
+        if tup_list[0] < 0 or tup_list[1] < 0:
             return False
 
         return True
 
+#    @property
     def valid_len(self, tup_list: tuple) -> bool:
         if len(tup_list) == 2:
             return True
@@ -76,9 +78,15 @@ class Square:
             return True
         else:
             return False
-
+    
     @position.setter
     def position(self, value):
-        if isinstance(value, tuple) is False or self.positive_tuple:
+        if (isinstance(value, tuple) is False and Square.positive_tuple(value) \
+            is False and Square.valid_len(value) is False \
+            and Square.valid_pai):
             raise TypeError("position must be a tuple of 2 positive integers")
+
+        if self.valid_len(self, value) is False:
+            raise TypeError("position must be a tuple of 2 positive integers")
+
         self.__position = value
