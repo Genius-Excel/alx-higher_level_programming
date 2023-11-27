@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+
+
 """This module contains the definition of the class for a Rectangle"""
 
 
@@ -14,7 +17,7 @@ class Rectangle(object):
     @property
     def width(self):
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         if not isinstance(value, int):
