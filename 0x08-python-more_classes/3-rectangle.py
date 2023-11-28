@@ -14,9 +14,12 @@ class Rectangle(object):
         self.__height = height
 
     def __str__(self):
-        str_print = '\n'.join('#' * self.__width for i in range(self.__height))
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        else:
+            str_print = '\n'.join('#' * self.__width for i in range(self.__height))
 
-        return str_print
+            return str_print
 
     @property
     def width(self):
