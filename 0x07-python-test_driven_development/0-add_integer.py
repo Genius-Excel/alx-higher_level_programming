@@ -2,13 +2,9 @@
 
 
 """This module contains a function tha peforms addition.
-
    Args:
        a (int): this is the first operand of the operation.
        b (int): this is the second operand of the operation.
-
-   Returns:
-       the value of the sum of a and b in integer.
 """
 
 
