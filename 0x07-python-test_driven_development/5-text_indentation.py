@@ -2,7 +2,6 @@
 
 
 """This module contains a function that does a text indentation.
-
    Args:
        text (str): this is the string represntation for which
        indentation is to be done.
