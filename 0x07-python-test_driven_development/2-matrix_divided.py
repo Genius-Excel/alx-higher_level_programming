@@ -2,13 +2,9 @@
 
 
 """This module conatains a function that divides all elements of a matrix
-
    Args:
        matrix (list): this is a list of matrix to be divided.
        div (int, float): this is the divisor of the matrix.
-
-  Returns:
-       a new list of matrix for which all elements have been divided to 2d.p
 """
 
 
