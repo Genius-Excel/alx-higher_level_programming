@@ -22,7 +22,7 @@ class Rectangle(object):
         if self.__width == 0 or self.__height == 0:
             return ""
         else:
-            sym = __class__.print_symbol
+            sym = str(self.print_symbol)
 
             rec = '\n'.join(sym * self.__width for i in range(self.__height))
 
