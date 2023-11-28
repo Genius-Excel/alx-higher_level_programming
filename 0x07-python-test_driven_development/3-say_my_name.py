@@ -9,6 +9,9 @@
 
 
 def say_my_name(first_name, last_name=""):
+    """This function prints the first and last names of a user.
+       Returns: None
+    """
     if not isinstance(first_name, str):
         raise TypeError("first_name must be a string")
 
