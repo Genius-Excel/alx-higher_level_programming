@@ -30,7 +30,7 @@ def matrix_mul(m_a, m_b):
     if not isinstance(m_b, list):
         raise TypeError("m_b must be a list")
 
-    def valid_matrix_lists(mat: list[list]) -> bool:
+    def valid_matrix_lists(mat: [[]]) -> bool:
         """This function validates the object of the matrix list.
            it checks the sub items of the matrix to check if it's a list.
 
@@ -108,7 +108,7 @@ def matrix_mul(m_a, m_b):
 matrix1 = [
     [1, 2, 3],
     [4, 5, 6],
-    (7, 8, 9)
+    [7, 8, 9]
 ]
 
 matrix2 = [
