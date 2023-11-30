@@ -116,7 +116,3 @@ matrix2 = [
     [6, 5, 4],
     [3, 2, 1]
 ]
-
-result = matrix_mul(matrix1, matrix2)
-
-print(result)
