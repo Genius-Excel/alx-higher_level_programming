@@ -30,10 +30,29 @@ def matrix_mul(m_a, m_b):
     if not isinstance(m_b, list):
         raise TypeError("m_b must be a list")
 
-    if not type(m_a, list(list)):
+    def valid_matrix_lists(mat :list[list]) -> bool:
+        """This function validates the object of the matrix list.
+           it checks the sub items of the matrix to check if it's a list.
+
+           Args:
+               mat (list[list]): a list of lists objects.
+           Returns:
+                True
+        """
+
+        if not isinstance(mat, list):
+            return False
+
+        for sub_list in mat:
+            if not isinstance(sub_list, list):
+                return False
+            
+        return True
+            
+    if not valid_matrix_lists(m_a):
         raise TypeError("m_a must be a list of lists")
 
-    if not type(m_b, list(list)):
+    if not valid_matrix_lists(m_b):
         raise TypeError("m_b must be a list of lists")
 
     # check for empty lists.
@@ -83,18 +102,18 @@ def matrix_mul(m_a, m_b):
     return (new_matrix_list)
 
 
-# matrix1 = [
-#     [1, 2, 3],
-#     [4, 5, 6],
-#     [7, 8, 9]
-# ]
+matrix1 = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
 
-# matrix2 = [
-#     [9, 8, 7],
-#     [6, 5, 4],
-#     [3, 2, 1]
-# ]
+matrix2 = [
+    [9, 8, 7],
+    [6, 5, 4],
+    [3, 2, 1]
+]
 
-# result = matrix_mul(matrix1, matrix2)
+result = matrix_mul(matrix1, matrix2)
 
-#print(result)
+print(result)
