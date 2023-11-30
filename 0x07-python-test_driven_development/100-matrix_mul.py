@@ -48,7 +48,7 @@ def matrix_mul(m_a, m_b):
 
     for row in m_a:
         if len(row) != mat_a_row_size:
-            rasie ValueError("each row of m_a must be of the same size")
+            raise ValueError("each row of m_a must be of the same size")
 
     mat_b_row_size = len(m_b[0])
 
@@ -56,42 +56,45 @@ def matrix_mul(m_a, m_b):
         if len(row) != mat_b_row_size:
             raise ValueError("each row of m_b must be of the same size")
 
-    for i in range(mat_a_size):
-        new_row = []
-        for j in range(mat_b_col_size):
-            element_prod = 0
-            for k in range(mat_b_size):
-                if not isinstance(m_a[i][k], (int, float)):
-                    raise TypeError("m_a should contain only integers or floats")
+    # Try except a ValueError occured during multiplication.
+    try:
+        for i in range(mat_a_size):
+            new_row = []
+            for j in range(mat_b_col_size):
+                element_prod = 0
+                for k in range(mat_b_size):
+                    if not isinstance(m_a[i][k], (int, float)):
+                        raise TypeError("m_a should contain only integers or floats")
 
-                if not isinstance(m_b[k][j], (int, float)):
-                    raise TypeError("m_b should contain only integers or floats")
-                element_prod += m_a[i][k] * m_b[k][j]
-            new_row.append(element_prod)
+                    if not isinstance(m_b[k][j], (int, float)):
+                        raise TypeError("m_b should contain only integers or floats")
+                    element_prod += m_a[i][k] * m_b[k][j]
+                new_row.append(element_prod)
 
-        new_matrix_list.append(new_row)
-
-    print(f"mat a size: {mat_a_size}")
-    print(f"mat b size: {mat_b_size}")
-    print(f"mat b col size: {mat_b_col_size}")
-    print(f"m_a[i][k] -> {type(m_a[i][k])}")
-    print(f"m_b[k[j] -> {type(m_b[k][j])}")
+            new_matrix_list.append(new_row)
+    except:
+        ValueError("m_a and m_b can't be multiplied")
+    # print(f"mat a size: {mat_a_size}")
+    # print(f"mat b size: {mat_b_size}")
+    # print(f"mat b col size: {mat_b_col_size}")
+    # print(f"m_a[i][k] -> {type(m_a[i][k])}")
+    # print(f"m_b[k[j] -> {type(m_b[k][j])}")
 
     return (new_matrix_list)
 
 
-matrix1 = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
+# matrix1 = [
+#     [1, 2, 3],
+#     [4, 5, 6],
+#     [7, 8, 9]
+# ]
 
-matrix2 = [
-    [9, 8, 7],
-    [6, 5, 4],
-    [3, 2, 1]
-]
+# matrix2 = [
+#     [9, 8, 7],
+#     [6, 5, 4],
+#     [3, 2, 1]
+# ]
 
-result = matrix_mul(matrix1, matrix2)
+# result = matrix_mul(matrix1, matrix2)
 
 #print(result)
