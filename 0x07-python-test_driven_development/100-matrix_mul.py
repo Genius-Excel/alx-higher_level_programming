@@ -8,11 +8,11 @@ def matrix_mul(m_a, m_b):
     """this function multiplies two matrices
 
        Args:
-           ma_a (list(list)): this is the first matrix operand.
-           ma_b (list(list)): this is the second matrix operand.
+           m_a (list(list)): this is the first matrix operand.
+           m_b (list(list)): this is the second matrix operand.
 
        Returns:
-           A new matrix list product of matrices ma_a and ma_b
+           A new matrix list product of matrices m_a and m_b
     """
 
     new_matrix_list = []
@@ -103,14 +103,3 @@ def matrix_mul(m_a, m_b):
     # print(f"m_b[k[j] -> {type(m_b[k][j])}")
 
     return (new_matrix_list)
-
-matrix1 = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
-matrix2 = [
-    [9, 8, 7],
-    [6, 5, 4],
-    [3, 2, 1]
-]
