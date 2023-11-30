@@ -17,12 +17,6 @@ def matrix_mul(m_a, m_b):
 
     new_matrix_list = []
 
-    mat_a_size = len(m_a)
-
-    mat_b_size = len(m_b)
-
-    mat_b_col_size = len(m_b[0])
-
     # validate both matrices are a list.
     if not isinstance(m_a, list):
         raise TypeError("m_a must be a list")
@@ -75,11 +69,18 @@ def matrix_mul(m_a, m_b):
         if len(row) != mat_b_row_size:
             raise ValueError("each row of m_b must be of the same size")
 
+    mat_a_size = len(m_a)
+
+    mat_b_size = len(m_b)
+
+    mat_b_col_size = len(m_b[0])
+
     # Try except a ValueError occured during multiplication.
     try:
         err_ma = "m_a should contain only integers or floats"
 
         err_mb = "m_b should contain only integers or floats"
+
         for i in range(mat_a_size):
             new_row = []
             for j in range(mat_b_col_size):
