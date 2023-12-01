@@ -70,12 +70,6 @@ def lazy_matrix_mul(m_a, m_b):
         if len(row) != mat_b_row_size:
             raise ValueError("each row of m_b must be of the same size")
 
-    mat_a_size = len(m_a)
-
-    mat_b_size = len(m_b)
-
-    mat_b_col_size = len(m_b[0])
-
     mat_arr_result = None
 
     # Try except a ValueError occured during multiplication.
@@ -105,9 +99,9 @@ def lazy_matrix_mul(m_a, m_b):
                     if not isinstance(item, (int, float)):
                         raise TypeError(err_msg)
 
-        validate_mat_arr(m_a_arr, err_ma)
+        validate_mat_arr(m_a, err_ma)
 
-        validate_mat_arr(m_b_arr, err_mb)
+        validate_mat_arr(m_b, err_mb)
 
         mat_arr_result = np.dot(m_a_arr, m_b_arr)
 
