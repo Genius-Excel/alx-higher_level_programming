@@ -12,10 +12,10 @@ def is_same_class(obj, a_class):
            a_class (any):class parameter of the class.
 
        Returns:
-           True if obj is member of a_class else false.
+           True if obj is member of a_class else False.
     """
 
-    if isinstance(obj, a_class):
+    if isinstance(obj, a_class) or type(obj) is a_class:
         return True
     else:
         return False
