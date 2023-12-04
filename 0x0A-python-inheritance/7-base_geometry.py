@@ -18,3 +18,6 @@ class BaseGeometry:
 
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
+
+        if not isinstance(name, str):
+            raise TypeError("{} must be a string".format(name))
