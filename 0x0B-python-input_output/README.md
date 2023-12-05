@@ -3,3 +3,4 @@
 ## Reading from a file.
 ## Writing to a file.
 ## Appending to a file.
+## Reading File in bytes.
