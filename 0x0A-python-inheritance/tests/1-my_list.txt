@@ -26,4 +26,15 @@
 >>> a_list.append(97)
 >>> print(a_list)
 [75, 38, 97]
+>>> b_list = MyList()
+>>> b_list.append('a')
+>>> b_list.append(23)
+>>> print(b_list)
+['a', 23]
+>>> c_list = MyList()
+>>> c_list.append('e')
+>>> c_list.append('t')
+>>> c_list.append('m')
+>>> print(c_list)
+['e', 't', 'm']
 >>> 
