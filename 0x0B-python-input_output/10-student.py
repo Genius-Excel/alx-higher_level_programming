@@ -19,19 +19,21 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-
         if attrs is None:
             return self.__dict__
 
+        # loop through the attrs and get the keys.
         new_json_dict = dict()
-        class_obj_dict = self.__dict__
-
-        for key, value in class_obj_dict.items():
-            if isinstance(value, (int, str, dict, list)):
-                new_json_dict[key] = value
-            elif isinstance(value, (set, tuple)):
-                new_json_dict[key] = list(value)
-            elif hasattr(value, "__dict__"):
-                new_json_dict[key] = self.to_json(self)
+        for att_key in attrs:
+            if hasattr(self, att_key):
+                att_value = getattr(self, att_key)
+                if isinstance(att_value, (int, str, list, dict)):
+                    new_json_dict[att_key] = att_value
+                elif isinstance(att_value, (tuple, set)):
+                    new_json_dict[att_key] = list(att_value)
+                elif hasattr(att_key, "__dict__"):
+                    new_json_dict[att_key] = self.to_json(self)
+                else:
+                    new_json_dict[att_key] = None
 
         return new_json_dict
