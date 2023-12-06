@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """this module contains a function that returns a serilized
-   dictionary of an object. 
+   dictionary of an object.
 """
 
 
@@ -10,7 +10,7 @@ def class_to_json(obj):
        Args:
            obj (any): this reprents the object of the class.
        Returns:
-           a dictionary of a new JSON object.   
+           a dictionary of a new JSON object.
     """
 
     new_json_dict = dict()
