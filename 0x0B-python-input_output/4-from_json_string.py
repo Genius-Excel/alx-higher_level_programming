@@ -11,7 +11,7 @@ def from_json_string(my_str):
        Args:
            my_string (any): This represents the JSON string.
        Returns:
-           A deserialised JSON object string.    
+           A deserialised JSON object string.
     """
 
     return (json.loads(my_str))
