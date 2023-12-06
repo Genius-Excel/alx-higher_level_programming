@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """This module contians a function that locates a specific string
-   and appends to the file. 
+   and appends to the file.
 """
 
 
