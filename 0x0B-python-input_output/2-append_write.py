@@ -9,7 +9,7 @@ def append_write(filename="", text=""):
            filename (any): this represents the file name.
            text (any): this is represents the text to be added to the file.
        Returns:
-           Number of characters appended to the file.        
+           Number of characters appended to the file.
     """
 
     with open(filename, "a") as the_file:
