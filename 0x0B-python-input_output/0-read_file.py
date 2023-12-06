@@ -13,4 +13,4 @@ def read_file(filename=""):
 
     with open(filename, "r") as the_file:
         for line in the_file:
-            print(line)
+            print(line, end='')
