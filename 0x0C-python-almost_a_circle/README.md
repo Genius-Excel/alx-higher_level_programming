@@ -1,5 +1,6 @@
 # Python Almost a circle.
-## This Project is a review of all the concpts I have lernt in Python so far.
+## This Project is a review of all the concepts I have learnt in Python so far.
+
 * Import
 * Exception handling
 * Classes
