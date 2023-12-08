@@ -122,7 +122,7 @@ class Rectangle(Base):
 
     def area(self):
         return (self.width * self.height)
-    
+
     def display(self):
         output = '\n'.join('#' * self.__width for i in range(self.__height))
         print(output, end=None)
