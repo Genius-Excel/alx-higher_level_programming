@@ -129,7 +129,9 @@ class Rectangle(Base):
         return (self.width * self.height)
 
     def display(self):
-        output = ('\n' * self.__y) +
-        '\n'.join((' ' * self.__x) +
-        '#' * self.__width for i in range(self.__height))
-        print(output, end=None)
+        output = ('\n' * self.__y)
+
+        for i in range(self.__height):
+            output += ' ' * self.__x + '#' * self.__width + '\n'
+
+        print(output, end='')
