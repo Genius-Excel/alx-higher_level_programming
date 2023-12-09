@@ -27,13 +27,13 @@ class Rectangle(Base):
        class.
 
         Attributes:
-            __width (int): this represents the width of the Rectangle
+            width (int): this represents the width of the Rectangle
                         object as a private instance attribute.
-            __height (int): this represents the height of the Rectangle
+            height (int): this represents the height of the Rectangle
                         object as a private intance attibute.
-            __x (int): this represent the x co-ordinate postion of the
+            x (int): this represent the x co-ordinate postion of the
                         Rectangle object as a private attribute.
-            __y (int): this represent the y co-ordinate postion of the
+            y (int): this represent the y co-ordinate postion of the
                     Rectangle object as a private attribute.
     """
 
@@ -137,18 +137,6 @@ class Rectangle(Base):
         print(output, end='')
 
     def update(self, *args, **kwargs):
-        # self.id = args[0]
-        # self.width = args[1]
-        # self.height = args[2]
-        # self.x = args[3]
-        # self.y = args[4]
-
-        # setattr(self, 'id', args[0])
-        # setattr(self, 'width' ,args[1])
-        # setattr(self, 'height', args[2])
-        # setattr(self, 'x', args[3])
-        # setattr(self, 'y', args[4])
-
         if len(args) >= 1:
             self.id = args[0]
         if len(args) >= 2:
