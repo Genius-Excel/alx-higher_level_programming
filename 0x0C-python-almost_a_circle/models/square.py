@@ -27,12 +27,14 @@ class Square(Rectangle):
         rep = "[Sqaure] ({}) {}/{} - {}".format(idx, x_c, y_c, self.__size)
         return rep
 
+    # @Rectangle.width.getter
     @property
     def size(self):
-        return self.width
+        return self.__width
 
     @Rectangle.width.setter
+    #@size.setter
     def size(self, value):
-        # self.width = value
-        Rectangle.width.fset(self, value)
+        self.__width = value
+        # Rectangle.width.fset(self, value)
         # self.height = value
