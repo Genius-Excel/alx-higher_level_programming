@@ -135,3 +135,27 @@ class Rectangle(Base):
             output += ' ' * self.__x + '#' * self.__width + '\n'
 
         print(output, end='')
+
+    def update(self, *args):
+        # self.id = args[0]
+        # self.width = args[1]
+        # self.height = args[2]
+        # self.x = args[3]
+        # self.y = args[4]
+
+        # setattr(self, 'id', args[0])
+        # setattr(self, 'width' ,args[1])
+        # setattr(self, 'height', args[2])
+        # setattr(self, 'x', args[3])
+        # setattr(self, 'y', args[4])
+
+        if len(args) >= 1:
+            self.id = args[0]
+        if len(args) >= 2:
+            self.__width = args[1]
+        if len(args) >= 3:
+            self.__height = args[2]
+        if len(args) >= 4:
+            self.__x = args[3]
+        if len(args) >= 5:
+            self.__y = args[4]
