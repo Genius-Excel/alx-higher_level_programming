@@ -31,8 +31,8 @@ class Square(Rectangle):
     def size(self):
         return self.width
 
-    @size.setter
+    @Rectangle.width.setter
     def size(self, value):
-        self.width = value
-        return self.width
+        # self.width = value
+        Rectangle.width.fset(self, value)
         # self.height = value
