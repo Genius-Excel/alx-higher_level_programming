@@ -4,6 +4,8 @@
 
 
 import json
+# from models.rectangle import Rectangle
+# from models.square import Square
 
 
 class Base(object):
@@ -49,3 +51,16 @@ class Base(object):
             return json_string
         else:
             return []
+
+    @classmethod
+    def create(cls, **dictionary):
+        pass
+        # att_list = ['width', 'height']
+        # for att in att_list:
+        #     if att in dictionary:
+        #         obj_instance = Rectangle(1, 4)
+        #     elif 'size' in dictionary:
+        #         obj_instance = Square(5)
+
+        # obj_instance.update(**dictionary)
+        # return obj_instance
