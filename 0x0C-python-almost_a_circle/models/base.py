@@ -42,3 +42,10 @@ class Base(object):
 
         with open(cls.filename, "w") as file:
             file.write(cls.to_json_string(cls.json_obj_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        if json_string:
+            return json_string
+        else:
+            return []
