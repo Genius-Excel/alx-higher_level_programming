@@ -30,16 +30,19 @@ class Square(Rectangle):
     # @Rectangle.width.getter
     @property
     def size(self):
+        """size getter property"""
         return self.__width
 
     @Rectangle.width.setter
     # @size.setter
     def size(self, value):
+        """size setter property"""
         self.__width = value
         # Rectangle.width.fset(self, value)
         # self.height = value
 
     def update(self, *args, **kwargs):
+        """update method"""
         if len(args) >= 1:
             self.id = args[0]
         if len(args) >= 2:
@@ -60,6 +63,7 @@ class Square(Rectangle):
                 self.y = kwargs['y']
 
     def to_dictionary(self):
+        """object dictionary"""
         sq_dict = {
             'id': self.id,
             'size': self.__size,
