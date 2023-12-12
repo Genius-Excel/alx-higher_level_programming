@@ -57,13 +57,12 @@ class Base(object):
     @classmethod
     def create(cls, **dictionary):
         """creates a new instance"""
-        pass
-        # att_list = ['width', 'height']
-        # for att in att_list:
-        #     if att in dictionary:
-        #         obj_instance = Rectangle(1, 4)
-        #     elif 'size' in dictionary:
-        #         obj_instance = Square(5)
+        if cls.__name__ == "Rectangle":
+            instance = cls(5, 10)
+        elif cls.__name__ == "Square":
+            instance = cls(7)
+        else:
+            raise TypeError("unknow")
+        instance.update(**dictionary)
 
-        # obj_instance.update(**dictionary)
-        # return obj_instance
+        return instance
