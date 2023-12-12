@@ -24,16 +24,19 @@ class Base(object):
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """converts to json"""
         if not list_dictionaries:
             return "[]"
 
         return json.dumps(list_dictionaries)
 
     def change_to_dictionary(self, data_obj):
+        """converts to dictionary"""
         pass
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """this method saves to file"""
         cls.json_obj_list = []
         cls.filename = "{}.json".format(cls.__name__)
 
@@ -45,6 +48,7 @@ class Base(object):
 
     @staticmethod
     def from_json_string(json_string):
+        """converts from json"""
         if json_string:
             return json_string
         else:
@@ -52,6 +56,7 @@ class Base(object):
 
     @classmethod
     def create(cls, **dictionary):
+        """creates a new instance"""
         pass
         # att_list = ['width', 'height']
         # for att in att_list:
