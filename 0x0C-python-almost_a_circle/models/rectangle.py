@@ -56,8 +56,11 @@ class Rectangle(Base):
 
     def __str__(self):
         """class str represwntation"""
-        rp = "[Rectangle] ({}) {}/{} - {}/{}\
-            ".format(self.id, self.__x, self.__y, self.__width, self.__height)
+        a = self.__x
+        b = self.__y
+        c = self.__width
+        d = self.__height
+        rp = "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, a, b, c, d)
         return rp
 
     @property
