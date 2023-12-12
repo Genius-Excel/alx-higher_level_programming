@@ -21,6 +21,7 @@ class Square(Rectangle):
         self.__size = size
 
     def __str__(self):
+        """square repr"""
         idx = self.id
         x_c = self.x
         y_c = self.y
