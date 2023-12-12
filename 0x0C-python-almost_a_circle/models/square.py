@@ -25,7 +25,7 @@ class Square(Rectangle):
         idx = self.id
         x_c = self.x
         y_c = self.y
-        rep = "[Sqaure] ({}) {}/{} - {}".format(idx, x_c, y_c, self.__size)
+        rep = "[Square] ({}) {}/{} - {}".format(idx, x_c, y_c, self.__size)
         return rep
 
     # @Rectangle.width.getter
