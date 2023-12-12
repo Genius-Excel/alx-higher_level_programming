@@ -49,10 +49,10 @@ class Base(object):
     @staticmethod
     def from_json_string(json_string):
         """converts from json"""
-        if json_string:
-            return json_string
-        else:
+        if json_string is None:
             return []
+        else:
+            return json_string
 
     @classmethod
     def create(cls, **dictionary):
